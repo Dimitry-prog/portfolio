@@ -1,0 +1,11 @@
+@use "src/styles/mixins.scss";
+
+.contact{
+  min-height: calc(100vh - 100px);
+  padding: 100px 30px;
+  @include mixins.center;
+  @include mixins.flexColumn;
+  h2 {
+    padding: 50px 0;
+  }
+}

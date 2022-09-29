@@ -1,0 +1,18 @@
+@import "variables";
+
+* {
+  scrollbar-color: $colorPrimary-2;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $colorPrimary-2;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: $colorPrimary-2;
+}

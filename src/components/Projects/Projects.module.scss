@@ -1,0 +1,36 @@
+@use "src/styles/mixins.scss";
+@import "src/styles/variables.scss";
+
+.projetcs{
+  background-color: $colorSecondary-1;
+  &__wrapper{
+    padding: 100px 30px;
+    @include mixins.center;
+    @include mixins.flexColumn;
+  }
+  h2 {
+    margin: 0 0 50px;
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  &__link{
+    margin: 50px 0 10px;
+    padding: 15px;
+    text-transform: uppercase;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $borderRadius-small;
+    background-color: $colorPrimary-3;
+    color: $colorWhite;
+    transition: $transition5;
+    &:hover{
+      background-color: $colorPrimary-2;
+      color: $colorBlack;
+    }
+  }
+}

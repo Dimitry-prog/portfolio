@@ -1,0 +1,50 @@
+@use "src/styles/mixins.scss";
+@import 'src/styles/variables.scss';
+
+.nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: transparent;
+  &__container{
+    @include mixins.center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list{
+    display: flex;
+    gap: 100px;
+    margin-right: 30px;
+  }
+  &__item{}
+  &__link{
+    color: $colorPrimary-3;
+  }
+  &__sticky{
+    position: sticky;
+    background-color: $colorWhite;
+    box-shadow: 0 2px 5px $colorPrimary-3;
+  }
+}
+
+.logo{
+  background-image: url(../../images/logoTrans.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 140px;
+  height: 80px;
+}
+
+.burger{
+  @media screen and (min-width: 780px){
+    display: none;
+  }
+}

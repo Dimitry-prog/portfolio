@@ -1,0 +1,53 @@
+@use "src/styles/mixins.scss";
+@import 'src/styles/variables.scss';
+
+.header{
+  height: 100vh;
+  background-color: $colorPrimary-1;
+  &::before{
+    content: "";
+    position: absolute;
+    left: 55%;
+    right: 0;
+    background-color: $colorWhite;
+    height: 100%;
+  }
+  &__body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+    @include mixins.center;
+  }
+  &__name{
+    align-self: center;
+    h1 {
+      padding-bottom: 10px;
+    }
+    p {
+      padding-bottom: 20px;
+    }
+  }
+  &__link{
+    padding: 10px;
+    border-radius: $borderRadius-small;
+    background-color: $colorPrimary-3;
+    width: 100px;
+    text-transform: uppercase;
+    color: $colorSecondary-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition5;
+    &:hover{
+      background-color: $colorPrimary-2;
+      color: $colorBlack;
+    }
+  }
+  &__img{
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+}
