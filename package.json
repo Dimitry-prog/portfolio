@@ -12,9 +12,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy": "npm run build && npm run gh-pages",
     "build": "react-scripts build",
-    "gh-pages": "gh-pages -d build",
-    "deploy": "react-scripts build && npm run gh-pages"
+    "gh-pages": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
