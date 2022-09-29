@@ -1,4 +1,5 @@
 @use "src/styles/mixins.scss";
+@import "src/styles/variables.scss";
 
 .contact{
   min-height: calc(100vh - 100px);
@@ -7,5 +8,66 @@
   @include mixins.flexColumn;
   h2 {
     padding: 50px 0;
+  }
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__talk{
+    h3 {
+     margin-bottom: 20px;
+     display: flex;
+     gap: 5px;
+    }
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
+    p{
+      margin-bottom: 25px;
+    }
+  }
+  &__write{
+    h3 {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 5px;
+    }
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
+    p{
+      margin-bottom: 25px;
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    div {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    label{
+      position: absolute;
+      left: 15px;
+      top: -15px;
+      padding: 5px;
+      background-color: $colorWhite;
+    }
+    input {
+      border-radius: 30px;
+      border-color:  $colorSecondary-1;
+      padding: 20px 15px;
+      background: none;
+    }
+    textarea{
+      border-radius: 30px;
+      border-color: $colorSecondary-1;
+      padding: 20px 15px;
+      min-height: 150px;
+      resize: none;
+    }
   }
 }

@@ -7,8 +7,9 @@ import Navbar from "./components/Navbar/Navbar";
 import routesConfig from "./routes/routesConfig";
 
 function App() {
+  // basename={`/portfolio/`}
   return (
-    <BrowserRouter basename={`/portfolio/`}>
+    <BrowserRouter>
       <Navbar/>
       <Routes>
       {routesConfig.map(({path, component}) => (
