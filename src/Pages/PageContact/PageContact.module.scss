@@ -2,43 +2,98 @@
 @import "src/styles/variables.scss";
 
 .contact{
-  min-height: calc(100vh - 100px);
   padding: 100px 30px;
-  @include mixins.center;
-  @include mixins.flexColumn;
-  h2 {
-    padding: 50px 0;
+  background-color: $colorSecondary-1;
+  &__wrapper{
+    @include mixins.center;
+    @include mixins.flexColumn;
+    h2 {
+      padding: 30px 0 10px;
+    }
+    p {
+      margin-bottom: 50px;
+    }
   }
   &__container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
   }
-  &__talk{
-    h3 {
-     margin-bottom: 20px;
-     display: flex;
-     gap: 5px;
+  &__talk {
+    padding: 3px;
+    position: relative;
+    border-radius: $borderRadius-small;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, transparent, $colorPrimary-3, $colorPrimary-3);
+      transform-origin: bottom right;
+      animation: anim 10s linear infinite;
     }
-    span {
-      display: block;
-      margin-bottom: 10px;
-    }
-    p{
-      margin-bottom: 25px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, transparent, $colorPrimary-3, $colorPrimary-3);
+      transform-origin: bottom right;
+      animation: anim 10s linear infinite -5s;
     }
   }
-  &__write{
+  &__talkWrap {
+    background-color: $colorSecondary-1;
+    z-index: 10;
+    position: relative;
+    padding: 15px;
+    height: 100%;
     h3 {
       margin-bottom: 20px;
       display: flex;
       gap: 5px;
     }
+
     span {
       display: block;
       margin-bottom: 10px;
     }
-    p{
+
+    p {
       margin-bottom: 25px;
+    }
+  }
+  &__write {
+    padding: 3px;
+    position: relative;
+    border-radius: $borderRadius-small;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, transparent, $colorPrimary-3, $colorPrimary-3);
+      transform-origin: bottom right;
+      animation: anim 10s linear infinite;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, transparent, $colorPrimary-3, $colorPrimary-3);
+      transform-origin: bottom right;
+      animation: anim 10s linear infinite -5s;
     }
   }
   &__form{
@@ -54,20 +109,55 @@
       left: 15px;
       top: -15px;
       padding: 5px;
-      background-color: $colorWhite;
+      background-color: $colorSecondary-1;
     }
     input {
-      border-radius: 30px;
-      border-color:  $colorSecondary-1;
+      border-radius: $borderRadius-ultra;
+      border:  2px solid $colorWhite;
       padding: 20px 15px;
       background: none;
+      &:focus{
+        border-color: $colorBlack;
+      }
     }
     textarea{
-      border-radius: 30px;
-      border-color: $colorSecondary-1;
+      border-radius: $borderRadius-ultra;
+      border: 2px solid $colorWhite;
       padding: 20px 15px;
       min-height: 150px;
+      background: transparent;
       resize: none;
+      &:focus{
+        border-color: $colorBlack;
+      }
     }
+    button {
+      padding: 10px;
+      border-radius: $borderRadius-small;
+      background-color: $colorPrimary-3;
+      width: 100px;
+      text-transform: uppercase;
+      color: $colorSecondary-1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      transition: $transition5;
+      &:hover{
+        background-color: $colorPrimary-2;
+        color: $colorBlack;
+      }
+    }
+  }
+}
+
+
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
