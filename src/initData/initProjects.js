@@ -6,6 +6,7 @@ export const initProjects = [
     link: "https://dimitry-prog.github.io/mesto__JS/",
     codeLink: 'https://github.com/Dimitry-prog/mesto__JS',
     description: 'Basic JS project without backend. Allows you to add/remove/like cards, edit profile, validate all forms, OOP, API',
+    functionality: '',
     stack: [
       "HTML5", "CSS3", "JS", "WEBPACK", "GIT",
     ],

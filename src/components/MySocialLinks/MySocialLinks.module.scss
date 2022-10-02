@@ -11,6 +11,8 @@
   &__link{
     svg {
       transition: $transition5;
+      width: 25px;
+      height: 25px;
       &:hover {
         color: $colorPrimary-3;
         cursor: pointer;
