@@ -1,0 +1,20 @@
+@import 'src/styles/variables.scss';
+
+.social{
+  &__list{
+    display: flex;
+    gap: 50px;
+  }
+  &__item{
+
+  }
+  &__link{
+    svg {
+      transition: $transition5;
+      &:hover {
+        color: $colorPrimary-3;
+        cursor: pointer;
+      }
+    }
+  }
+}

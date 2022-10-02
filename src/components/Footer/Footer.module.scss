@@ -1,10 +1,13 @@
+@use 'src/styles/mixins.scss';
 @import 'src/styles/variables.scss';
 
 .footer{
-  display: flex;
+  @include mixins.flexColumn;
   justify-content: center;
-  align-items: center;
   min-height: 100px;
   background-color: $colorBlack;
   color: $colorSecondary-1;
+  p {
+    margin-top: 20px;
+  }
 }
