@@ -68,7 +68,7 @@ const PageContact = () => {
                     <label>Message</label>
                     <textarea name='user_message' placeholder="Write your message"></textarea>
                   </div>
-                  <button type='submit'>
+                  <button type='submit' value='Send'>
                     Submit
                     {sending ? <VscLoading/> : <FiArrowUpRight/>}
                   </button>
