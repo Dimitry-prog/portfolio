@@ -9,7 +9,7 @@ import routesConfig from "./routes/routesConfig";
 function App() {
   // basename={`/portfolio/`}
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={`/portfolio/`}>
       <Navbar/>
       <Routes>
       {routesConfig.map(({path, component}) => (
