@@ -68,10 +68,11 @@ const PageContact = () => {
                     <label>Message</label>
                     <textarea name='user_message' placeholder="Write your message"></textarea>
                   </div>
-                  <button type='submit' value='Send'>
-                    Submit
-                    {sending ? <VscLoading/> : <FiArrowUpRight/>}
-                  </button>
+                  {/*<button type='submit' value='Send'>*/}
+                  {/*  Submit*/}
+                  {/*  {sending ? <VscLoading/> : <FiArrowUpRight/>}*/}
+                  {/*</button>*/}
+                  <input type="submit" value="Send" />
                 </form>
               </div>
             </div>
