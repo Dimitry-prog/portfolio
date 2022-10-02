@@ -3,9 +3,9 @@ export const initProjects = [
     id: 1,
     img: './images/mesto.jpg',
     name: 'Mesto',
-    link: "https://dimitry-prog.github.io/mesto/",
-    codeLink: 'https://github.com/Dimitry-prog/mesto',
-    description: 'Allows you to add/remove/like cards, edit profile, validate all forms, OOP, all requests to the server via fetch',
+    link: "https://dimitry-prog.github.io/mesto__JS/",
+    codeLink: 'https://github.com/Dimitry-prog/mesto__JS',
+    description: 'Basic JS project without backend. Allows you to add/remove/like cards, edit profile, validate all forms, OOP, API',
     stack: [
       "HTML5", "CSS3", "JS", "WEBPACK", "GIT",
     ],
@@ -16,7 +16,7 @@ export const initProjects = [
     name: 'Travels',
     link: "https://dimitry-prog.github.io/russian-travel/",
     codeLink: 'https://github.com/Dimitry-prog/russian-travel',
-    description: 'The landing page was laid out according to the BEM methodology, adaptive, desktop first',
+    description: 'Will allow you to "ride" from Pskov to Ulan-Ude and visit / read unusual places throughout the trip. The landing page was laid out according to the BEM methodology, adaptive, desktop first',
     stack: [
       "HTML5", "CSS3", "GIT",
     ],

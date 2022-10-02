@@ -1,11 +1,15 @@
 @use "src/styles/mixins.scss";
+@import "src/styles/variables.scss";
 
 .about{
   min-height: calc(100vh - 100px);
   padding: 100px 30px;
-  @include mixins.center;
-  @include mixins.flexColumn;
-  h2 {
-    padding: 50px 0;
+  background-color: $colorSecondary-1;
+  &__wrapper{
+    @include mixins.center;
+    @include mixins.flexColumn;
+    h2 {
+      padding: 30px 0 10px;
+    }
   }
 }

@@ -3,6 +3,7 @@
 
 .contact{
   padding: 100px 30px;
+  min-height: calc(100vh - 100px);
   background-color: $colorSecondary-1;
   &__wrapper{
     @include mixins.center;
