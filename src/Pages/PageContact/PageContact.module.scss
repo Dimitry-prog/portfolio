@@ -86,78 +86,7 @@
       animation-delay: -5s;
     }
   }
-  &__form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    div {
-      margin-bottom: 20px;
-      position: relative;
-      &:last-of-type{
-        margin-bottom: 0;
-      }
-    }
-    label{
-      position: absolute;
-      left: 15px;
-      top: -15px;
-      padding: 5px;
-      background-color: $colorSecondary-1;
-    }
-    input {
-      border-radius: $borderRadius-ultra;
-      border:  2px solid $colorWhite;
-      padding: 20px 15px;
-      background: none;
-      &:focus{
-        border-color: $colorBlack;
-      }
-    }
-    textarea{
-      border-radius: $borderRadius-ultra;
-      border: 2px solid $colorWhite;
-      padding: 20px 15px;
-      min-height: 150px;
-      background: transparent;
-      resize: none;
-      &:focus{
-        border-color: $colorBlack;
-      }
-    }
-  }
-  &__submit{
-    &:hover svg {
-      color: $colorBlack;
-    }
-    &:hover input {
-      color: $colorBlack;
-    }
-    input {
-      border-radius: $borderRadius-small;
-      background-color: $colorPrimary-3;
-      text-transform: uppercase;
-      color: $colorSecondary-1;
-      transition: $transition5;
-      border-color: transparent;
-      padding: 10px 20px 10px 0;
-      width: 100px;
-      cursor: pointer;
-      &:focus {
-        border-color: $colorPrimary-3;
-      }
-    }
-    svg {
-      position: absolute;
-      top: 25%;
-      right: 10px;
-      color: $colorWhite;
-      transition: $transition5;
-    }
-  }
-  &__submit_loading{
-    animation: circle 1s infinite ease;
-  }
-}
+ }
 
 @keyframes circle {
   0% {

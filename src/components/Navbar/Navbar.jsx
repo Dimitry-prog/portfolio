@@ -4,7 +4,6 @@ import {initMenuLinks} from "../../initData/initMenuLinks";
 import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
-
     const [stickyNavBar, setStickyNavBAr] = useState(false);
 
     useEffect(() => {

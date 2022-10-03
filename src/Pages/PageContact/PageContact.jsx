@@ -1,29 +1,11 @@
-import React, {useRef, useState} from "react";
+import React from "react";
 import styles from "./PageContact.module.scss";
 import {BsChat, BsTelegram} from "react-icons/bs";
 import {RiSendPlaneLine, RiWhatsappFill} from "react-icons/ri";
-import {FiArrowUpRight} from "react-icons/fi";
-import {VscLoading} from 'react-icons/vsc';
 import {MdEmail} from 'react-icons/md';
-import emailjs from '@emailjs/browser';
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 const PageContact = () => {
-  const [sending, setSending] = useState(false);
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setSending(true);
-    emailjs
-      .sendForm('service_qtgwul4', 'template_hvcs10a', form.current, '2q37Vsp_7F5xHIEsb')
-      .then((result) => {
-        e.target.reset();
-        setSending(false);
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-  };
 
   return (
     <main>
@@ -38,21 +20,21 @@ const PageContact = () => {
                   <BsChat/>
                   Talk to me
                 </h3>
-                <a href='mailto:kfifa3@gmail.com' target='_blank'>
+                <a href="mailto:kfifa3@gmail.com" target="_blank">
                 <span>
                   <MdEmail/>
                   Email
                 </span>
                 </a>
                 <p>Write me a letter</p>
-                <a href='https://api.whatsapp.com/send?phone=375298301150' target='_blank'>
+                <a href="https://api.whatsapp.com/send?phone=375298301150" target="_blank">
                 <span>
                   <RiWhatsappFill/>
                   Whatsapp
                 </span>
                 </a>
                 <p>Call me</p>
-                <a href='https://t.me/Dmitry_Myt' target='_blank'>
+                <a href="https://t.me/Dmitry_Myt" target="_blank">
                 <span>
                   <BsTelegram/>
                   Telegram
@@ -67,28 +49,7 @@ const PageContact = () => {
                   <RiSendPlaneLine/>
                   Write to me
                 </h3>
-                <form
-                  ref={form}
-                  onSubmit={sendEmail}
-                  className={styles.contact__form}
-                >
-                  <div>
-                    <label>Names</label>
-                    <input type="text" name="user_name" placeholder="Write your names"/>
-                  </div>
-                  <div>
-                    <label>Email</label>
-                    <input type="email" name="user_email" placeholder="Write your email"/>
-                  </div>
-                  <div>
-                    <label>Message</label>
-                    <textarea name="user_message" placeholder="Write your message"></textarea>
-                  </div>
-                  <div className={styles.contact__submit}>
-                    <input type="submit" value="Send"/>
-                    {sending ? <VscLoading className={styles.contact__submit_loading}/> : <FiArrowUpRight/>}
-                  </div>
-                </form>
+                <ContactForm/>
               </div>
             </div>
           </div>
