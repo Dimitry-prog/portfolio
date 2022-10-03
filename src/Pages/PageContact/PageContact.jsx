@@ -1,9 +1,10 @@
 import React, {useRef, useState} from "react";
 import styles from "./PageContact.module.scss";
-import {BsChat} from "react-icons/bs";
-import {RiSendPlaneLine} from "react-icons/ri";
+import {BsChat, BsTelegram} from "react-icons/bs";
+import {RiSendPlaneLine, RiWhatsappFill} from "react-icons/ri";
 import {FiArrowUpRight} from "react-icons/fi";
 import {VscLoading} from 'react-icons/vsc';
+import {MdEmail} from 'react-icons/md';
 import emailjs from '@emailjs/browser';
 
 const PageContact = () => {
@@ -37,12 +38,27 @@ const PageContact = () => {
                   <BsChat/>
                   Talk to me
                 </h3>
-                <span>Email</span>
-                <p>kfifa3@gmail.com</p>
-                <span>Whatsapp</span>
-                <p>+375298301150</p>
-                <span>Telegram</span>
-                <p>@Dmitry</p>
+                <a href='mailto:kfifa3@gmail.com' target='_blank'>
+                <span>
+                  <MdEmail/>
+                  Email
+                </span>
+                </a>
+                <p>Write me a letter</p>
+                <a href='https://api.whatsapp.com/send?phone=375298301150' target='_blank'>
+                <span>
+                  <RiWhatsappFill/>
+                  Whatsapp
+                </span>
+                </a>
+                <p>Call me</p>
+                <a href='https://t.me/Dmitry_Myt' target='_blank'>
+                <span>
+                  <BsTelegram/>
+                  Telegram
+                </span>
+                </a>
+                <p>Send a message</p>
               </div>
             </div>
             <div className={styles.contact__write}>
@@ -58,21 +74,20 @@ const PageContact = () => {
                 >
                   <div>
                     <label>Names</label>
-                    <input type="text" name='user_name' placeholder="Write your names"/>
+                    <input type="text" name="user_name" placeholder="Write your names"/>
                   </div>
                   <div>
                     <label>Email</label>
-                    <input type="email" name='user_email' placeholder="Write your email"/>
+                    <input type="email" name="user_email" placeholder="Write your email"/>
                   </div>
                   <div>
                     <label>Message</label>
-                    <textarea name='user_message' placeholder="Write your message"></textarea>
+                    <textarea name="user_message" placeholder="Write your message"></textarea>
                   </div>
-                  {/*<button type='submit' value='Send'>*/}
-                  {/*  Submit*/}
-                  {/*  {sending ? <VscLoading/> : <FiArrowUpRight/>}*/}
-                  {/*</button>*/}
-                  <input type="submit" value="Send" />
+                  <div className={styles.contact__submit}>
+                    <input type="submit" value="Send"/>
+                    {sending ? <VscLoading className={styles.contact__submit_loading}/> : <FiArrowUpRight/>}
+                  </div>
                 </form>
               </div>
             </div>

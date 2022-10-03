@@ -9,7 +9,7 @@ const Header = () => {
         <div className={styles.header__body}>
           <div className={styles.header__name}>
             <h1>I'm Dimitry</h1>
-            <p>Front-end developer</p>
+            <p>Frontend Developer</p>
             <Link to='/contact' className={styles.header__link}>Hire me</Link>
             <MySocialLinks/>
           </div>

@@ -25,7 +25,7 @@
     position: relative;
     border-radius: $borderRadius-small;
     overflow: hidden;
-    &::before {
+    &::before, &::after {
       content: '';
       position: absolute;
       top: -50%;
@@ -34,18 +34,10 @@
       height: 100%;
       background: linear-gradient(0deg, transparent, $colorPrimary-3, $colorPrimary-3);
       transform-origin: bottom right;
-      animation: anim 10s linear infinite;
+      animation: circle 10s linear infinite;
     }
     &::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(0deg, transparent, $colorPrimary-3, $colorPrimary-3);
-      transform-origin: bottom right;
-      animation: anim 10s linear infinite -5s;
+      animation-delay: -5s;
     }
   }
   &__talkWrap {
@@ -59,14 +51,19 @@
       display: flex;
       gap: 5px;
     }
-
     span {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 5px;
       margin-bottom: 10px;
     }
-
     p {
       margin-bottom: 25px;
+    }
+    svg {
+      color: $colorPrimary-3;
+      width: 20px;
+      height: 20px;
     }
   }
   &__write {
@@ -74,7 +71,7 @@
     position: relative;
     border-radius: $borderRadius-small;
     overflow: hidden;
-    &::before {
+    &::before, &::after {
       content: '';
       position: absolute;
       top: -50%;
@@ -83,18 +80,10 @@
       height: 100%;
       background: linear-gradient(0deg, transparent, $colorPrimary-3, $colorPrimary-3);
       transform-origin: bottom right;
-      animation: anim 10s linear infinite;
+      animation: circle 10s linear infinite;
     }
     &::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(0deg, transparent, $colorPrimary-3, $colorPrimary-3);
-      transform-origin: bottom right;
-      animation: anim 10s linear infinite -5s;
+      animation-delay: -5s;
     }
   }
   &__form{
@@ -104,6 +93,9 @@
     div {
       margin-bottom: 20px;
       position: relative;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
     }
     label{
       position: absolute;
@@ -132,29 +124,42 @@
         border-color: $colorBlack;
       }
     }
-    button {
-      padding: 10px;
+  }
+  &__submit{
+    &:hover svg {
+      color: $colorBlack;
+    }
+    &:hover input {
+      color: $colorBlack;
+    }
+    input {
       border-radius: $borderRadius-small;
       background-color: $colorPrimary-3;
-      width: 100px;
       text-transform: uppercase;
       color: $colorSecondary-1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
       transition: $transition5;
-      &:hover{
-        background-color: $colorPrimary-2;
-        color: $colorBlack;
+      border-color: transparent;
+      padding: 10px 20px 10px 0;
+      width: 100px;
+      cursor: pointer;
+      &:focus {
+        border-color: $colorPrimary-3;
       }
     }
+    svg {
+      position: absolute;
+      top: 25%;
+      right: 10px;
+      color: $colorWhite;
+      transition: $transition5;
+    }
+  }
+  &__submit_loading{
+    animation: circle 1s infinite ease;
   }
 }
 
-
-
-@keyframes anim {
+@keyframes circle {
   0% {
     transform: rotate(0deg);
   }
