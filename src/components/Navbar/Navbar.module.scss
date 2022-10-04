@@ -17,11 +17,15 @@
   &__top{
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   &__list{
     display: flex;
     gap: 100px;
     margin-right: 30px;
+    @media screen and (max-width: 780px){
+      display: none;
+    }
   }
   &__item{
     position: relative;
@@ -60,6 +64,15 @@
 }
 
 .burger{
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg{
+    width: 20px;
+    height: 20px;
+    color: $colorPrimary-3;
+  }
   @media screen and (min-width: 780px){
     display: none;
   }

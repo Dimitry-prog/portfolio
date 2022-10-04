@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Link, NavLink} from "react-router-dom";
 import {initMenuLinks} from "../../initData/initMenuLinks";
+import {GiHamburgerMenu} from 'react-icons/gi';
 import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
@@ -24,7 +25,9 @@ const Navbar = () => {
       <div className={styles.nav__container}>
         <div className={styles.nav__top}>
           <Link to='/' className={styles.logo}></Link>
-          <button className={styles.burger}></button>
+          <button className={styles.burger}>
+            <GiHamburgerMenu/>
+          </button>
         </div>
         <ul className={styles.nav__list}>
           {initMenuLinks.map(elem => (

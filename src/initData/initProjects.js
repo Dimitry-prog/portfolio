@@ -30,7 +30,7 @@ export const initProjects = [
     codeLink: 'https://github.com/Dimitry-prog/starWars__React',
     description: 'A project to study react and its capabilities. Working with context, redux, router-dom, swapi-api',
     stack: [
-      "React", "Redux", "React-router-dom","HTML5", "Module CSS3", "GIT", "WEBPACK"
+      "React", "Redux", "React-router-dom","HTML5", "Module CSS3", "Storybook", "GIT", "WEBPACK"
     ],
   },
   {

@@ -6,10 +6,17 @@
   align-items: center;
   &:nth-last-of-type(2n + 1) .project__wrapper{
     grid-column: 5/-1;
+    @media screen and (max-width: 650px) {
+      grid-column: 1;
+    }
   }
   &:nth-last-of-type(2n + 1) .project__info{
     grid-column: 2/8;
     box-shadow: 0 5px 15px $colorPrimary-3;
+    @media screen and (max-width: 650px) {
+      grid-column: 1;
+      box-shadow: none;
+    }
   }
   &:hover .project__overlay::before {
     opacity: 0;
@@ -17,12 +24,19 @@
   &:hover .project__wrapper{
     box-shadow: 0 5px 15px $colorPrimary-3;
   }
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
   &__wrapper{
     border-radius: $borderRadius-small;
     grid-column: 1/8;
     grid-row: 1/1;
     position: relative;
     transition: $transition5;
+    @media screen and (max-width: 650px) {
+      grid-column: 1;
+      grid-row: 1;
+    }
   }
   &__overlay{
     height: 300px;
@@ -56,6 +70,11 @@
     border-radius: $borderRadius-small;
     padding: 25px;
     box-shadow: 5px 5px 15px $colorPrimary-3;
+    @media screen and (max-width: 650px) {
+      grid-column: 1;
+      grid-row: 2;
+      box-shadow: none;
+    }
     p {
       margin: 15px 0;
     }
