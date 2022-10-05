@@ -3,8 +3,10 @@ import {Link, NavLink} from "react-router-dom";
 import {initMenuLinks} from "../../initData/initMenuLinks";
 import {GiHamburgerMenu} from 'react-icons/gi';
 import styles from "./Navbar.module.scss";
+import {useGlobalContext} from "../../context/context";
 
 const Navbar = () => {
+    const {openSidebar} = useGlobalContext();
     const [stickyNavBar, setStickyNavBAr] = useState(false);
 
     useEffect(() => {
@@ -25,7 +27,7 @@ const Navbar = () => {
       <div className={styles.nav__container}>
         <div className={styles.nav__top}>
           <Link to='/' className={styles.logo}></Link>
-          <button className={styles.burger}>
+          <button onClick={openSidebar} className={styles.burger}>
             <GiHamburgerMenu/>
           </button>
         </div>

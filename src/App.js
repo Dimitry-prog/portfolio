@@ -5,12 +5,14 @@ import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import routesConfig from "./routes/routesConfig";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
   // basename={`/portfolio/`}
   return (
-    <BrowserRouter basename={`/portfolio/`}>
+    <BrowserRouter >
       <Navbar/>
+      <Sidebar/>
       <Routes>
       {routesConfig.map(({path, component}) => (
        <Route
