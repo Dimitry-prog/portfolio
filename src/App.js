@@ -1,5 +1,5 @@
 import "./styles/App.scss";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
@@ -10,19 +10,19 @@ import Sidebar from "./components/Sidebar/Sidebar";
 function App() {
   // basename={`/portfolio/`}
   return (
-    <BrowserRouter >
-      <Navbar/>
-      <Sidebar/>
+    <BrowserRouter basename={`/portfolio/`}>
+      <Navbar />
+      <Sidebar />
       <Routes>
-      {routesConfig.map(({path, component}) => (
-       <Route
-          key={path}
-          path={path}
-          element={component}
-       />
-      ))}
+        {routesConfig.map(({ path, component }) => (
+          <Route
+            key={path}
+            path={path}
+            element={component}
+          />
+        ))}
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }
