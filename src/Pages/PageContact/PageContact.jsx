@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./PageContact.module.scss";
-import {BsChat, BsTelegram} from "react-icons/bs";
-import {RiSendPlaneLine, RiWhatsappFill} from "react-icons/ri";
-import {MdEmail} from 'react-icons/md';
+import { BsChat, BsTelegram } from "react-icons/bs";
+import { RiSendPlaneLine, RiWhatsappFill } from "react-icons/ri";
+import { MdEmail } from 'react-icons/md';
 import ContactForm from "../../components/ContactForm/ContactForm";
 
 const PageContact = () => {
@@ -17,28 +17,28 @@ const PageContact = () => {
             <div className={styles.contact__talk}>
               <div className={styles.contact__talkWrap}>
                 <h3>
-                  <BsChat/>
+                  <BsChat />
                   Talk to me
                 </h3>
-                <a href="mailto:kfifa3@gmail.com" target="_blank">
-                <span>
-                  <MdEmail/>
-                  Email
-                </span>
+                <a href="mailto:kfifa3@gmail.com" target="_blank" rel="noreferrer noopener">
+                  <span>
+                    <MdEmail />
+                    Email
+                  </span>
                 </a>
                 <p>Write me a letter</p>
-                <a href="https://api.whatsapp.com/send?phone=375298301150" target="_blank">
-                <span>
-                  <RiWhatsappFill/>
-                  Whatsapp
-                </span>
+                <a href="https://api.whatsapp.com/send?phone=375298301150" target="_blank" rel="noreferrer noopener">
+                  <span>
+                    <RiWhatsappFill />
+                    Whatsapp
+                  </span>
                 </a>
                 <p>Call me</p>
-                <a href="https://t.me/Dmitry_Myt" target="_blank">
-                <span>
-                  <BsTelegram/>
-                  Telegram
-                </span>
+                <a href="https://t.me/Dmitry_Myt" target="_blank" rel="noreferrer noopener">
+                  <span>
+                    <BsTelegram />
+                    Telegram
+                  </span>
                 </a>
                 <p>Send a message</p>
               </div>
@@ -46,10 +46,10 @@ const PageContact = () => {
             <div className={styles.contact__write}>
               <div className={styles.contact__talkWrap}>
                 <h3>
-                  <RiSendPlaneLine/>
+                  <RiSendPlaneLine />
                   Write to me
                 </h3>
-                <ContactForm/>
+                <ContactForm />
               </div>
             </div>
           </div>

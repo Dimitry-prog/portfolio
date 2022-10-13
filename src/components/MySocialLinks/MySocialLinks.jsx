@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './MySocialLinks.module.scss';
-import {initMySocialLinks} from "../../initData/initMySocialLinks";
+import { initMySocialLinks } from "../../initData/initMySocialLinks";
 
 const MySocialLinks = () => {
   return (
@@ -14,6 +14,7 @@ const MySocialLinks = () => {
             <a
               href={item.link}
               target='_blank'
+              rel="noreferrer noopener"
               className={styles.social__link}
             >
               {item.img}

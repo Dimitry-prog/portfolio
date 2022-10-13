@@ -2,12 +2,12 @@ import React from "react";
 import styles from './SingleProject.module.scss';
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
-const SingleProject = ({id, img, name, link, codeLink, description, stack}) => {
+const SingleProject = ({ id, img, name, link, codeLink, description, stack }) => {
   return (
     <article className={styles.project}>
       <div className={styles.project__wrapper}>
         <div className={styles.project__overlay}>
-          <img src={img} alt={name} className={styles.project__img}/>
+          <img src={img} alt={name} className={styles.project__img} />
         </div>
       </div>
       <div className={styles.project__info}>
@@ -19,11 +19,11 @@ const SingleProject = ({id, img, name, link, codeLink, description, stack}) => {
           ))}
         </div>
         <div className={styles.project__links}>
-          <a href={link} target='_blank' rel="noreferrer">
-            <FiExternalLink/>
+          <a href={link} target='_blank' rel="noreferrer noopener">
+            <FiExternalLink />
           </a>
-          <a href={codeLink} target='_blank' rel="noreferrer">
-            <FiGithub/>
+          <a href={codeLink} target='_blank' rel="noreferrer noopener">
+            <FiGithub />
           </a>
         </div>
       </div>
