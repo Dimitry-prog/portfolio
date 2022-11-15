@@ -1,7 +1,7 @@
 export const initProjects = [
   {
     id: 1,
-    img: './images/mesto.jpg',
+    img: './images/chickenApp.jpg',
     name: 'Mesto',
     link: "https://dimitry-prog.github.io/chicken-app/",
     codeLink: 'https://github.com/Dimitry-prog/chicken-app',
